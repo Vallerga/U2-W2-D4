@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spectral:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+htlm {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  background: beige;
+}
+
+nav {
+  font-family: "Roboto", sans-serif;
+  font-family: "Spectral", serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #002341;
+  font-size: 0.8rem;
+  height: 10vh;
+}
+nav div {
+  display: flex;
+  justify-content: flex-start;
+}
+nav a {
+  text-transform: uppercase;
+  background-color: #7071c0;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #7071c0;
+  outline: 1px solid #7071c0;
+  color: beige;
+  text-decoration: none;
+  border: beige solid 2px;
+  border-radius: 10px;
+  margin: 10px;
+}
+nav a:hover {
+  box-shadow: none;
+  background-color: white;
+  color: #7071c0;
+}
+
+header {
+  background: #4893c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo {
+  height: 10vh;
+  padding: 10px;
+}
+header .logo img {
+  height: 100%;
+}
+header h1 {
+  text-transform: uppercase;
+  background-color: #002341;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #002341;
+  outline: 1px solid #002341;
+  color: #7071c0;
+  padding: 1%;
+}
+header h1:hover {
+  box-shadow: none;
+  background-color: white;
+  color: #002341;
+}
+
+.box, .box-1 {
+  background-color: #4893c2;
+  border-radius: 10px;
+}
+
+.box-1 {
+  font-size: 1.2em;
+  margin-right: 5%;
+}
+
+.baseButton {
+  text-transform: uppercase;
+  background-color: #4893c2;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #4893c2;
+  outline: 1px solid #4893c2;
+}
+.baseButton:hover {
+  box-shadow: none;
+  background-color: white;
+  color: #4893c2;
+}
+
+#par {
+  padding-top: 1em;
+  color: rgb(6, 255, 27);
+}
+
+.padd-0 {
+  padding-left: 0px;
+}
+
+.padd-1 {
+  padding-left: 12px;
+}
+
+.padd-2 {
+  padding-left: 24px;
+}
+
+.padd-3 {
+  padding-left: 36px;
+}
+
+.padd-4 {
+  padding-left: 48px;
+}
+
+.paragraph-orange {
+  color: orange;
+}
+
+.paragraph-navy {
+  color: navy;
+}
+
+.paragraph-yellow {
+  color: yellow;
+}
+
+.paragraph-pink {
+  color: pink;
+}
+
+.paragraph-red {
+  color: red;
+}/*# sourceMappingURL=app.css.map */

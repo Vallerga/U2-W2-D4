@@ -1,0 +1,159 @@
+@import "reset";
+// @import "colorsvariable";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spectral:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+$blu: #002341;
+$acqua: #4893c2;
+$azz: #7071c0;
+
+
+body {
+  background: beige;
+  // font-family: "Roboto", sans-serif;
+  // font-family: "Spectral", serif;
+}
+
+@mixin baseButton($mainColor) {
+  text-transform: uppercase;
+  background-color: $mainColor;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px $mainColor;
+  outline: 1px solid $mainColor;
+  &:hover {
+    box-shadow: none;
+    background-color: white;
+    color: $mainColor;
+  }
+}
+
+nav {
+  font-family: "Roboto", sans-serif;
+  font-family: "Spectral", serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: $blu;
+  font-size: 0.8rem;
+  height: 10vh;
+  div {
+    display: flex;
+    justify-content: flex-start;
+  }
+  a {
+    @include baseButton($azz);
+    color: beige;
+    text-decoration: none;
+    border: beige solid 2px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+}
+header {
+  background: $acqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    height: 10vh;
+    padding: 10px;
+    img {
+      height: 100%;
+    }
+  }
+  h1 {
+    @include baseButton($blu);
+    color: $azz;
+    padding: 1%;
+  }
+}
+
+.box {
+  background-color: $acqua;
+  border-radius: 10px;
+}
+
+.box-1 {
+  @extend .box;
+  font-size: 1.2em;
+  margin-right: 5%;
+}
+
+.baseButton {
+  @include baseButton($acqua);
+}
+
+// .button-red {
+//   @include baseButton(red);
+// }
+
+// .button-special-green {
+//   @include baseButton($special-green);
+// }
+
+// .button-special-red {
+//   @include baseButton($special-red);
+// }
+
+// @mixin customParagraph($fontsize, $lSpacing) {
+//   font: {
+//     size: $fontsize;
+//     family: "sans-serif";
+//   }
+//   padding: 2em;
+//   letter-spacing: $lSpacing;
+// }
+
+// .normalParagraph {
+//   @include customParagraph(1em, 0);
+// }
+
+// .crazyParagraph {
+//   @include customParagraph(1.5em, 0.5em);
+// }
+
+// @mixin customBox($size, $val, $property) {
+//   width: $size;
+//   height: $size;
+//   background-#{$property}: $val;
+//   background-size: cover;
+// }
+
+// .custom-box-1 {
+//   @include customBox(150px, orange, "color");
+//   @include customParagraph(1em, 0);
+//   color: white;
+// }
+
+// .custom-box-2 {
+//   @include customBox(250px, url(https://placekitten.com/250/240), 'image');
+//   @include customParagraph(1em, 0);
+//   color: white;
+// }
+
+$generic-padding: 16px;
+$colorPar: rgb(6, 255, 27);
+
+#par {
+  @if ($generic-padding <= 16px) {
+    padding-top: 1em;
+    color: $colorPar;
+  } @else {
+    padding-top: $generic-padding;
+  }
+}
+
+@for $i from 0 to 5 {
+  .padd-#{$i} {
+    padding-left: $i * 12px;
+  }
+}
+
+$colors: orange, navy, yellow, pink, red;
+
+@each $c in $colors {
+    .paragraph-#{$c} {
+        color: $c;
+    }
+}
